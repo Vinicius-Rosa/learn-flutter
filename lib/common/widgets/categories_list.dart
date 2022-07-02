@@ -9,8 +9,13 @@ class CategoriesList extends StatelessWidget {
     return SizedBox(
       height: 140,
       child: ListView(
+        physics: const BouncingScrollPhysics(
+          parent: AlwaysScrollableScrollPhysics(),
+        ),
         scrollDirection: Axis.horizontal,
         children: <Widget>[
+          CategoryCard(title: "Categoria"),
+          CategoryCard(title: "Categoria"),
           CategoryCard(title: "Categoria"),
           CategoryCard(title: "Categoria"),
           CategoryCard(title: "Categoria"),

@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 
 class SearchInput extends StatelessWidget {
-  const SearchInput({Key? key}) : super(key: key);
+  void Function() handleFilterVisibility;
 
-  void showFilters() {}
+  SearchInput({Key? key, required this.handleFilterVisibility})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +21,7 @@ class SearchInput extends StatelessWidget {
           hintText: 'Search',
           prefixIcon: const Icon(Icons.search_rounded),
           suffixIcon: IconButton(
-            onPressed: showFilters,
+            onPressed: handleFilterVisibility,
             icon: const Icon(Icons.filter_list_outlined),
           ),
         ),
