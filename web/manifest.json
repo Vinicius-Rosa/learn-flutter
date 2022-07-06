@@ -1,6 +1,6 @@
 {
-    "name": "pokedex",
-    "short_name": "pokedex",
+    "name": "animal_wiki",
+    "short_name": "animal_wiki",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

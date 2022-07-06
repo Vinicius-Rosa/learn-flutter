@@ -1,5 +1,5 @@
+import 'package:animal_wiki/screens/screens.dart';
 import 'package:flutter/material.dart';
-import 'package:pokedex/screens/home/home_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,12 +12,18 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Apartment Booking UI',
+      title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.grey,
+        primarySwatch: Colors.blue,
       ),
-      home: HomePage(),
+      initialRoute: "/splash",
+      routes: {
+        "/splash": (context) => const SplashScreen(),
+        "/welcome": (context) => const WelcomeScreen(),
+        "/login": (context) => const LoginScreen(),
+        "/home": (context) => const HomeScreen(),
+      },
     );
   }
 }
